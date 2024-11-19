@@ -1,0 +1,87 @@
+.productRow {
+    display: flex;
+    width: 100%;
+    padding: 30px 0px;
+    .item {
+        width: 100%;
+        padding: 0px 15px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        flex-wrap: wrap;
+    } 
+}
+
+.productThumb {
+    width: 250px;
+    height: 450px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 15px;
+    .imgWrapper {
+        width: 100%;
+        height: 70%;
+        overflow: hidden;
+        >img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .info {
+        .css-d1ybhn-MuiRating-root {
+            font-size: 1.1rem;
+        }
+        .stock {
+            color: #007600;
+            font-size: 12px;
+        }
+        >h4 {
+            color: black;
+            transition: all 45ms ease-in-out;
+            &:hover {
+                color: #3BB77E;
+            }
+        }
+        >div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            > div {
+                font-size: 16px;
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                > span:last-child {
+                    font-size: 12px;
+                    text-decoration: line-through;
+                    color: #CC0C39;
+                }
+            }
+            >button {
+                padding: 6px 12px;
+                display: flex;
+                font-size: 13px;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                outline: none;
+                border: 1px solid #DEF9EC;
+                border-radius: 2px;
+                color: #3BB77E;
+                background: #b1e9ce;
+                transition: all 0.2s ease-in;
+                >svg {
+                    padding-right: 2px;
+                    font-size: 15px;
+                }
+                &:hover {
+                    background: #417bd8;
+                    color: rgb(235, 230, 230);
+                    border: 1px solid #417bd8;
+                }
+            }
+        }
+    }
+}

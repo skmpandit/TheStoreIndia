@@ -1,0 +1,52 @@
+.newsLetterBanner {
+    width: 550px; 
+    height: 70px; 
+    position: absolute; 
+    bottom: 150px; 
+    left:9%; 
+    z-index: 10;
+    >input { 
+        width: 100%; 
+        height: 100%; 
+        background: #fff; 
+        border-radius:60px; 
+        border: 0px; 
+        outline: none ; 
+        padding-left: 80px; 
+        font-size: 20px; 
+        padding-right: 200px;
+    }
+    > button { 
+        padding: 10px 50px; 
+        border-radius: 50px; 
+        color: #fff; 
+        position: absolute; 
+        top: 0px; 
+        right: 0px; 
+        height: 70px; 
+        font-size: 20px; 
+        text-transform: capitalize; 
+        font-weight: 400;
+        background: rgba(94, 158, 94, 0.8);
+        &:hover {
+            color: white;
+            background: rgb(94, 158, 94);
+        }
+    }
+    > svg {
+        position: absolute;
+        top: 20px;
+        left: 35px;
+        z-index: 10;
+        font-size: 30px;
+        transform: rotate(-21deg); opacity: 0.5;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+        svg {
+            transform: rotate(0deg); opacity: 0.5; 
+            
+        }
+    }
+}
+

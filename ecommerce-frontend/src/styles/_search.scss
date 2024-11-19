@@ -1,0 +1,76 @@
+.product-search-page {
+    padding: 2rem;
+    // @include flex(row, flex-start, stretch, 2rem);
+    // min-height: calc(100vh - 6.5vh);
+    display: flex;
+
+    > aside {
+        width: 22rem;
+        height: 38rem;
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.247);
+        padding: 2rem;
+        @include flex(column, flex-start, stretch, 0.5rem);
+        > h2 {
+            padding-top: 20px;
+            @include heading;
+        }
+        >div {
+            > div {
+                border: 1px solid rgb(197, 194, 194);
+                width: 100%;
+                padding: 0.1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                >input, select {
+                    background: none;
+                    @include inputStyle(80%, white, 1px solid rgba(154, 154, 154, 0.38));
+                    border-radius: 2px;
+                    margin: 0.8rem;
+                }
+                border-radius: 5px;
+                margin: 0.5rem;
+            }
+        }
+    }
+    >main {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 30px 0px;
+        overflow-y: hidden;
+        > h1 {
+            padding-left: 15px;
+            @include heading;
+        }
+        >input {
+            @include inputStyle(50%);
+            // border-radius: 5px; 
+            margin: 1rem;
+            font-size: 1.2rem;
+            display: block;
+            border-bottom: 1px solid rgb(185, 183, 183);
+        }
+        .search-product-list {
+            width: 100%;
+            padding: 0px 15px;
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        article {
+            @include flex;
+            >button {
+                @include flex;
+                @include btn(0.5rem 1rem, $color3, $color1);
+                border-radius: 10px;
+                &:disabled {
+                    cursor: not-allowed;
+                    opacity: 0.5;
+                    color: $color2;
+                }
+            }
+        }
+    }
+}
